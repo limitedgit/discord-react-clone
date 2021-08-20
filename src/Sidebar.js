@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from "./SidebarChannel";
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
-import CallIcon from '@material-ui/icons/Call';
+import CallEndIcon from '@material-ui/icons/CallEnd';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import Avatar from '@material-ui/core/Avatar';
 import MicIcon from '@material-ui/icons/Mic';
@@ -48,7 +48,7 @@ function Sidebar() {
 
                 <div className="sidebar__voiceIcons">
                     <InfoOutlinedIcon/>
-                    <CallIcon/>
+                    <CallEndIcon/>
                 </div>
             </div>
                 <div className="sidebar__profile">
