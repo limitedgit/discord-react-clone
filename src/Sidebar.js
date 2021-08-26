@@ -12,14 +12,14 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import {useSelector} from "react-redux";
 import {selectUser } from "./features/userSlice";
-import firestore, {auth} from "./firebase"
+import data, {auth} from "./firebase"
 import { useEffect } from "react";
 function Sidebar() {
     const user = useSelector(selectUser);
     var [channels, setChannels] = useState([]);
 
     useEffect(() => {
-        firestore.collection("channels").onSnapshot(snapshot => {
+        data.collection("channels").onSnapshot(snapshot => {
             setChannels(snapshot.docs.map(doc => ({
                 id: doc.id,
                 channel: doc.data(),
@@ -32,7 +32,7 @@ function Sidebar() {
     const handleAddChannel = () => {
         const channelName = prompt("Enter a new channel name");
         if (channelName) {
-            firestore.collection('channels').add({
+            data.collection('channels').add({
                 channelName: channelName,
             })
         }
@@ -40,7 +40,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__top">
-                <h3> Some User llama</h3>
+                <h3> Looks like Discord</h3>
                 <ExpandMoreIcon/>
             </div>
             <div className="sidebar__channels">
