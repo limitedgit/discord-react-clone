@@ -15,7 +15,7 @@ function Login() {
 
 
             <div className="login__logo">
-            <img src = "https://discord.com/assets/cb48d2a8d4991281d7a6a95d2f58195e.svg"
+            <img src = {require('./discordLogo.png')}
             alt ="discord logo"/>
             
             </div>
